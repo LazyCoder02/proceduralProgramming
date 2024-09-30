@@ -1,17 +1,14 @@
 package com.ProceduralProgramming;
 
+import java.text.NumberFormat;
+
 public class Execution {
     public static void main(String[] args) {
 
-        int baseSalary = 50_000;
-        int extraHours = 10;
-        int hourlyRate  = 20;
-    }
-    public static int calculateWage(
-            int baseSalary,
-            int extraHours,
-            int hourlyRate
-    ){
-        return baseSalary * (hourlyRate + extraHours );
+        var employee1 = new Employee(15_000, 32);
+        System.out.println(Employee.numberOfEmplyees);
+        int salary = employee1.calculateWage(21);
+        System.out.println(NumberFormat.getCurrencyInstance().format(salary));
+
     }
 }
